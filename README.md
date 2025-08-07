@@ -573,7 +573,7 @@ function Damage(Part, hit, minim, maxim, knockback, Type, Property, Delay, HitSo
 		end
 		local c = Create("ObjectValue"){
 			Name = "creator",
-			Value = game:service("Players").LocalPlayer,
+			Value = owner,
 			Parent = h,
 		}
 		game:GetService("Debris"):AddItem(c, .5)
