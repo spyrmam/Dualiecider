@@ -101,7 +101,7 @@ Credit to CKbackup's and idk..
 wait(1 / 60)
 Effects = { }
 local Player = owner
-local Character = Player.Character
+local Character = owner.Character
 local Humanoid = Character.Humanoid
 local Mouse = Player:GetMouse()
 local LeftArm = Character["Left Arm"]
