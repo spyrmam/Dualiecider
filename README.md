@@ -736,7 +736,7 @@ function ShowDamage(Pos, Text, Time, Color)
 	end)
 end
 
-local lrs = game:service'RunService'.RenderStepped
+
 function bleed(chr,timeforbleed)
 	local Rate = (1/30)
 	local clr = BrickColor.new"Maroon"
