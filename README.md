@@ -141,6 +141,7 @@ do
     --Changing owner to fake player object to support owner:GetMouse()
     game,owner = g,g.Players.LocalPlayer
 end
+end
 
 -- DUALIECIDER
 --[[
