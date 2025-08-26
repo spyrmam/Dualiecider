@@ -98,7 +98,6 @@ Effects = { }
 local Player = game.Players.owner
 local Character = Player.Character
 local Humanoid = Character.Humanoid
-local Mouse = Player:GetMouse()
 local LeftArm = Character["Left Arm"]
 local RightArm = Character["Right Arm"]
 local LeftLeg = Character["Left Leg"]
