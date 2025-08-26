@@ -158,9 +158,10 @@ Credit to CKbackup's and idk..
 
 wait(1 / 60)
 Effects = { }
-local Player = owner
+local Player = game.Players.localPlayer
 local Character = Player.Character
 local Humanoid = Character.Humanoid
+local Mouse = Player:GetMouse()
 local LeftArm = Character["Left Arm"]
 local RightArm = Character["Right Arm"]
 local LeftLeg = Character["Left Leg"]
@@ -630,7 +631,7 @@ function Damage(Part, hit, minim, maxim, knockback, Type, Property, Delay, HitSo
 		end
 		local c = Create("ObjectValue"){
 			Name = "creator",
-			Value = owner,
+			Value = game:service("Players").LocalPlayer,
 			Parent = h,
 		}
 		game:GetService("Debris"):AddItem(c, .5)
@@ -794,7 +795,7 @@ function ShowDamage(Pos, Text, Time, Color)
 	end)
 end
 
-
+local lrs = game:service'RunService'.RenderStepped
 function bleed(chr,timeforbleed)
 	local Rate = (1/30)
 	local clr = BrickColor.new"Maroon"
@@ -1990,4 +1991,7 @@ end
 		end
 	end
 end
+end
+
+
 end
