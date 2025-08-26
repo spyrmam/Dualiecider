@@ -100,10 +100,10 @@ Credit to CKbackup's and idk..
 
 wait(1 / 60)
 Effects = { }
-local Player = owner
-local Character = owner.Character
+local Player = game.Players.owner
+local Character = Player.Character
 local Humanoid = Character.Humanoid
---local Mouse = Player:GetMouse()
+local Mouse = Player:GetMouse()
 local LeftArm = Character["Left Arm"]
 local RightArm = Character["Right Arm"]
 local LeftLeg = Character["Left Leg"]
@@ -573,7 +573,7 @@ function Damage(Part, hit, minim, maxim, knockback, Type, Property, Delay, HitSo
 		end
 		local c = Create("ObjectValue"){
 			Name = "creator",
-			Value = owner,
+			Value = game:service("Players").owner,
 			Parent = h,
 		}
 		game:GetService("Debris"):AddItem(c, .5)
