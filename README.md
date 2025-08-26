@@ -11,7 +11,12 @@ do
 	local Event = Instance.new("RemoteEvent")
 	Event.Name = "UserInput_Event"
 
-	
+	--Fake event to make stuff like Mouse.KeyDown work
+	local function fakeEvent()
+		local t = {_fakeEvent=true,Connect=function(self,f)self.Function=f end}
+		t.connect = t.Connect
+		return t
+	end
 
 	--Creating fake input objects with fake variables
     local m = {Target=nil,Hit=CFrame.new(),KeyUp=fakeEvent(),KeyDown=fakeEvent(),Button1Up=fakeEvent(),Button1Down=fakeEvent()}
@@ -98,6 +103,7 @@ Effects = { }
 local Player = game.Players.owner
 local Character = Player.Character
 local Humanoid = Character.Humanoid
+local Mouse = Player:GetMouse()
 local LeftArm = Character["Left Arm"]
 local RightArm = Character["Right Arm"]
 local LeftLeg = Character["Left Leg"]
